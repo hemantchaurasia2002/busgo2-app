@@ -7,10 +7,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma skills sync || exit 0"
+    "postinstall": "prisma skills sync || exit 0",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:studio": "npx prisma studio"
   },
   "dependencies": {
-    "@prisma/client": "^7.10.1",
+    "@prisma/client": "6.19.3",
+    "better-auth": "^1.7.14",
     "next": "16.4.3",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -22,8 +25,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.4.3",
-    "prisma": "^8.0.0-rc.28",
+    "prisma": "6.19.3",
     "tailwindcss": "^4",
+    "tsx": "^4.23.15",
     "typescript": "^5"
   }
 }
